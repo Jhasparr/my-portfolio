@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import ScrollSlide from "./components/ScrollSlide";
 
 export default function Projects() {
   const myProjects = [
@@ -64,7 +65,8 @@ export default function Projects() {
         </div>
         {/* Projects Card */}
         {myProjects.map((card, i) => (
-          <div className="mb-15" key={i}>
+          <ScrollSlide key={i}>
+          <div className="mb-15" >
             <h3 className="text-2xl font-semibold text-[#FFEA9F] mt-2 mb-2">
               {card.name}
             </h3>
@@ -95,6 +97,7 @@ export default function Projects() {
               </div>
             </Link>
           </div>
+          </ScrollSlide>
         ))}
       </div>
     </div>

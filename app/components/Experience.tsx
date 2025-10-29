@@ -1,9 +1,13 @@
 import React from "react";
+import ScrollPopAnimation from "../ScrollPopAnimation";
+import AnimatedOnScroll from "../AnimatedSection";
 
 export default function Experience() {
   return (
     <div className="container mx-auto px-2 ">
       <div className="text-left  mx-auto px-2 md:px-2 xl:px-60 lg:px-8  py-2 w-full ">
+        <ScrollPopAnimation>
+        
         <div className="flex space-x-3 lg:space-x-6 w-full lg:w-full  items-center  md:py-8 py-2  ">
           <div className="items-center flex gap-3">
             <img
@@ -18,9 +22,11 @@ export default function Experience() {
             </div>
           </div>
         </div>
+        </ScrollPopAnimation>
 
         <div className="relative border-l-2 border-gray-600 ml-2">
-          <div className="mb-10 ml-4">
+          <ScrollPopAnimation>
+          <div className="mb-12 ml-4">
             <div className="absolute w-3 h-3 bg-white  rounded-full -left-1.5 top-1.5"></div>
             <p className="text-[#FFBBC3]  md:text-xl text-[17px]">
               January 2024 – September 2025
@@ -47,9 +53,12 @@ export default function Experience() {
               </li>
             </ul>
           </div>
-
+          </ScrollPopAnimation>
+          
+          
           <div className="mb-6 ml-4">
             <div className="absolute w-3 h-3 bg-white rounded-full -left-1.5 lg:top-76 "></div>
+            <ScrollPopAnimation>
             <p className="text-[#FFBBC3]   md:text-xl text-[17px] ">
               August 2025 - Present
             </p>
@@ -68,7 +77,9 @@ export default function Experience() {
               experience. Assisted with deployment workflows and environment
               configurations.
             </p>
+            </ScrollPopAnimation>
           </div>
+          
         </div>
       </div>
     </div>
