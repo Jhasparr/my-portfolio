@@ -53,10 +53,10 @@ export default function Projects() {
             <img
               src={"/Code.svg"}
               alt="Briefcase"
-              className="invert dark:invert-0"
+              className=""
             ></img>
             <div>
-              <h1 className="lg:text-4xl md:text-4xl text-3xl text-gray-700 dark:text-white font-bold ">
+              <h1 className="lg:text-4xl md:text-4xl text-3xl text-white font-bold ">
                 Projects
               </h1>
             </div>
@@ -72,7 +72,7 @@ export default function Projects() {
             <div>
               {card.link2 && (
                 <Link href={card.link2}>
-                  <button className="px-2 py-1 border-2 text-gray-700 dark:text-white bg-[#E5E5E5] dark:bg-[#2E2E2E] flex items-center rounded-full space-x-2 cursor-pointer shadow-md mb-3 lg:mb-0">
+                  <button className="px-2 py-1 border-2 text-white bg-[#2E2E2E] flex items-center rounded-full space-x-2 cursor-pointer shadow-md mb-3 lg:mb-0">
                     <img src={card.icon} alt="icon" />
                     <p className="mr-1">Github</p>
                   </button>

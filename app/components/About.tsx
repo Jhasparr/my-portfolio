@@ -38,7 +38,7 @@ export default function About() {
           ></Image>
         </div>
         <div className="flex space-x-3 lg:space-x-6  items-center justify-ce lg:py-4 py-2 ">
-          <h1 className="md:text-6xl text-3xl text-gray-700 dark:text-white font-bold">
+          <h1 className="md:text-6xl text-3xl  text-white font-bold">
             Hey, I'm James{" "}
           </h1>
           <button className="bg-[#BEDBFE] rounded-md text-[#1F3A8A] lg:px-3 px-1.5 lg:py-1 py-0.5 md:text-sm text-[10px] mt-1 lg:mt-3 lg:font-semibold mr-2">
@@ -47,12 +47,12 @@ export default function About() {
         </div>
 
         <p className="md:mt-2  md:text-xl text-[17px] w-full ">
-          <span className="dark:text-[#FFEA9F] text-purple-600">
+          <span className="text-[#FFEA9F] ">
             Driven frontend developer skilled in Typescript,{" "}
-          </span>{" "}<span className="dark:text-[#FFBBC3] text-[#F472B6]">
+          </span>{" "}<span className="text-[#FFBBC3] ">
             {" "}
             React, and modern web technologies.  </span>{" "}
-            <span className="dark:text-[#B6FBFF] text-[#3B82F6]">
+            <span className="text-[#B6FBFF] ">
             
             {" "}
             Dedicated to creating clean,{" "}
@@ -64,11 +64,11 @@ export default function About() {
         <div className="w-full mt-3.5  md:flex gap-10 ">
           {myButtons.map((button, index) => (
             <Link key={index} href={button.link} target="_blank">
-              <button className="px-2.5 py-1 border-2 text-gray-700 dark:text-white bg-[#E5E5E5] dark:bg-[#2E2E2E] flex items-center rounded-full space-x-2 dark:hover:bg-gray-600 hover:bg-gray-300 cursor-pointer shadow-md mb-3 lg:mb-0">
+              <button className="px-2.5 py-1 border-2 text-white  bg-[#2E2E2E] flex items-center rounded-full space-x-2 hover:bg-gray-600  cursor-pointer shadow-md mb-3 lg:mb-0">
                 <img
                   src={button.icon}
                   alt="Profile Icon"
-                  className="w-5 h-5 invert dark:invert-0"
+                  className="w-5 h-5 "
                 />
 
                 <p className="mr-2">{button.name}</p>

@@ -9,23 +9,23 @@ export default function Experience() {
             <img
               src={"/Business.svg"}
               alt="Briefcase"
-              className="invert dark:invert-0"
+              className=""
             ></img>
             <div>
-              <h1 className="lg:text-4xl md:text-4xl text-3xl text-gray-700 dark:text-white font-bold ">
+              <h1 className="lg:text-4xl md:text-4xl text-3xl text-white font-bold ">
                 Experience
               </h1>
             </div>
           </div>
         </div>
 
-        <div className="relative border-l-2 border-gray-300 dark:border-gray-600 ml-2">
+        <div className="relative border-l-2 border-gray-600 ml-2">
           <div className="mb-10 ml-4">
-            <div className="absolute w-3 h-3 bg-black dark:bg-white  rounded-full -left-1.5 top-1.5"></div>
-            <p className="dark:text-[#FFBBC3] text-[#F472B6]  md:text-xl text-[17px]">
+            <div className="absolute w-3 h-3 bg-white  rounded-full -left-1.5 top-1.5"></div>
+            <p className="text-[#FFBBC3]  md:text-xl text-[17px]">
               January 2024 – September 2025
             </p>
-            <h3 className=" md:text-xl text-[17px] dark:font-semibold dark:text-[#FFEA9F] text-purple-600">
+            <h3 className=" md:text-xl text-[17px] font-semibold text-[#FFEA9F] ">
               Frontend Software Developer | CRAFWELL ENGINEERING
             </h3>
             <p className=" md:text-xl text-[17px]">
@@ -49,11 +49,11 @@ export default function Experience() {
           </div>
 
           <div className="mb-6 ml-4">
-            <div className="absolute w-3 h-3 bg-black dark:bg-white rounded-full -left-1.5 lg:top-76 "></div>
-            <p className="dark:text-[#FFBBC3] text-[#F472B6]  md:text-xl text-[17px] ">
+            <div className="absolute w-3 h-3 bg-white rounded-full -left-1.5 lg:top-76 "></div>
+            <p className="text-[#FFBBC3]   md:text-xl text-[17px] ">
               August 2025 - Present
             </p>
-            <h3 className=" md:text-xl text-[17px] dark:font-semibold dark:text-[#FFEA9F] text-purple-600">
+            <h3 className=" md:text-xl text-[17px] font-semibold text-[#FFEA9F] ">
               Web Development Intern
             </h3>
             <p className=" md:text-xl text-[17px]">

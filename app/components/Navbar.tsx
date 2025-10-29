@@ -13,7 +13,7 @@ import LeftArrowIcon, {
   ProjectsIcon,
 } from "./IconLibrary";
 import NavIcons from "./NavIcons";
-import useDarkMode from "./Darkmode";
+
 import Link from "next/link";
 import { link } from "fs";
 import { usePathname } from "next/navigation";
@@ -53,7 +53,6 @@ const navIcons = [
 ];
 
 export default function Navbar() {
-  const [dark, setDark] = useDarkMode();
   const [active, setActive] = useState("Home");
 
   useEffect(() => {
@@ -77,14 +76,6 @@ export default function Navbar() {
     handleScroll(); // Run on mount
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  // useEffect(() => {
-  //   if (dark) {
-  //     document.documentElement.classList.add("dark");
-  //   } else {
-  //     document.documentElement.classList.remove("dark");
-  //   }
-  // }, [dark]);
 
   const [open, setOpen] = useState(false);
 
@@ -110,7 +101,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        <nav className="hidden lg:flex space-x-1 z-50 bg-gray-100 shadow-md rounded-xl px-1 py-1 dark:bg-[#212121] border bo mx-auto">
+        <nav className="hidden lg:flex space-x-1 z-50  shadow-md rounded-xl px-1 py-1 bg-[#212121] border bo mx-auto">
           {navIcons.map(({ icon: Icon, link, name }) => {
             const isActive = active === name;
             return (
@@ -119,16 +110,14 @@ export default function Navbar() {
                   className={` transition-all px-4 py-3 rounded-xl flex ${
                     isActive
                       ? `bg-white`
-                      : `hover:bg-gray-50 dark:hover:bg-[#737373] hover:shadow-md`
+                      : ` hover:bg-[#737373] hover:shadow-md`
                   }`}
                 >
                   <Icon
-                    className={`${
-                      isActive ? `text-black` : `text-black dark:text-white`
-                    }`}
+                    className={`${isActive ? `text-black` : `text-white`}`}
                   />
                 </div>
-                <span className="absolute left-1/2 -translate-x-1/2 mt-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-1 transition-all bg-gray-100  text-xs font-bold px-2 py-1 rounded-lg whitespace-nowrap dark:bg-[#333]">
+                <span className="absolute left-1/2 -translate-x-1/2 mt-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-1 transition-all   text-xs font-bold px-2 py-1 rounded-lg whitespace-nowrap bg-[#333]">
                   {name}
                 </span>
               </Link>
@@ -136,9 +125,17 @@ export default function Navbar() {
           })}
         </nav>
         <div className="flex justify-center items-center  space-x-4 ">
-          <div className="hidden lg:flex hover:bg-gray-50 hover:shadow-md transition-all space-x-1 z-50 dark:bg-[#212121] bg-gray-100 shadow-md rounded-xl px-2 py-2 dark:hover:bg-[#737373] border">
+          <div className="hidden lg:flex  hover:shadow-md transition-all space-x-1 z-50 bg-[#212121] shadow-md rounded-xl px-2 py-2 hover:bg-[#737373] border">
             <CallIcon />
-            <div className="flex"><Link target="_blank" href={"mailto:jasperezepue@gmail.com"}>Contact Me</Link></div>
+            <div className="flex">
+              <Link
+                className="text-white"
+                target="_blank"
+                href={"mailto:jasperezepue@gmail.com"}
+              >
+                Contact Me
+              </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -159,10 +156,10 @@ export default function Navbar() {
             className="block lg:hidden"
             aria-label="Toggle navigation"
           >
-            <MoreCircleIcon className="dark:text-white " />
+            <MoreCircleIcon className="text-white " />
           </button>
           <div
-            className={`fixed overflow-y-auto top-0 pt-[18px] left-0 w-[300px] md:w-1/2 h-screen bg-white dark:bg-[linear-gradient(180deg,_#0a0a0a,_#1f1f1f,_#0a0a0a)] z-50 transition-transform duration-500 ${
+            className={`fixed overflow-y-auto top-0 pt-[18px] left-0 w-[300px] md:w-1/2 h-screen  bg-[linear-gradient(180deg,_#0a0a0a,_#1f1f1f,_#0a0a0a)] z-50 transition-transform duration-500 ${
               open ? "transform translate-x-0 " : "transform -translate-x-full "
             }`}
           >
@@ -174,7 +171,7 @@ export default function Navbar() {
                 onClick={toggleNav}
                 aria-label="Close navigation"
               >
-                <CloseCircleIcon className="dark:text-white" />
+                <CloseCircleIcon className="text-white" />
               </button>
             </div>
             {/* Mobile Button Slider */}
@@ -187,7 +184,7 @@ export default function Navbar() {
                     </div>
                     <div className="py-0 px-1 flex flex-col flex-nowrap gap-4 mb-5">
                       <div className="w-64 ">
-                        <div className="flex flex-row justify-between space-x-2 hover:bg-gray-50 dark:active:bg-[#212121]  dark:hover:bg-[#212121] px-4 py-3 rounded-2xl  ">
+                        <div className="flex flex-row justify-between space-x-2  active:bg-[#212121]  hover:bg-[#212121] px-4 py-3 rounded-2xl  ">
                           <div className="flex flex-row w-full  ">
                             <div className=" flex flex-row shadow-md gap-2 w-9 h-9 rounded-lg ">
                               <Image
@@ -215,12 +212,6 @@ export default function Navbar() {
             {/*  */}
           </div>
         </div>
-        {/* <div
-                className="flex transition-all space-x-1 z-50  sticky rounded-xl px-2 py-1 "
-                onClick={() => setDark(!dark)}
-              >
-                {dark ? <MoonIcon /> : <SunIcon />}
-              </div> */}
       </div>
     </div>
   );
