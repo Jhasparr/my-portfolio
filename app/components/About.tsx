@@ -6,12 +6,12 @@ export default function About() {
   const myButtons = [
     {
       name: "LinkedIn",
-      icon: "/Linkedin.svg",
+      icon: "/LinkedIn.svg",
       link: "http://linkedin.com/in/ezepue-james/",
     },
     {
       name: "Github",
-      icon: "/Github.svg",
+      icon: "/GitHub.svg",
       link: "https://github.com/Jhasparr",
     },
     {

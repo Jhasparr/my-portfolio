@@ -53,6 +53,7 @@ const navIcons = [
 ];
 
 export default function Navbar() {
+ 
   const [active, setActive] = useState("Home");
 
   useEffect(() => {
@@ -76,6 +77,8 @@ export default function Navbar() {
     handleScroll(); // Run on mount
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  
 
   const [open, setOpen] = useState(false);
 
@@ -114,7 +117,9 @@ export default function Navbar() {
                   }`}
                 >
                   <Icon
-                    className={`${isActive ? `text-black` : `text-white`}`}
+                    className={`${
+                      isActive ? `text-black` : `text-white`
+                    }`}
                   />
                 </div>
                 <span className="absolute left-1/2 -translate-x-1/2 mt-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-1 transition-all   text-xs font-bold px-2 py-1 rounded-lg whitespace-nowrap bg-[#333]">
@@ -127,15 +132,7 @@ export default function Navbar() {
         <div className="flex justify-center items-center  space-x-4 ">
           <div className="hidden lg:flex  hover:shadow-md transition-all space-x-1 z-50 bg-[#212121] shadow-md rounded-xl px-2 py-2 hover:bg-[#737373] border">
             <CallIcon />
-            <div className="flex">
-              <Link
-                className="text-white"
-                target="_blank"
-                href={"mailto:jasperezepue@gmail.com"}
-              >
-                Contact Me
-              </Link>
-            </div>
+            <div className="flex"><Link className="text-white" target="_blank" href={"mailto:jasperezepue@gmail.com"}>Contact Me</Link></div>
           </div>
         </div>
       </div>
@@ -212,6 +209,7 @@ export default function Navbar() {
             {/*  */}
           </div>
         </div>
+       
       </div>
     </div>
   );
